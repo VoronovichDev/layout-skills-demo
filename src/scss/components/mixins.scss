@@ -1,0 +1,28 @@
+@mixin font($ff, $fw) {
+   font-family: $ff;
+   font-weight: $fw;
+}
+
+@mixin flex($align-items: stretch, $justify-content: flex-start, $flex-wrap: nowrap, $flex-direction: row) {
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   -webkit-box-align: $align-items;
+   -ms-flex-align: $align-items;
+   align-items: $align-items;
+   -webkit-box-pack: $justify-content;
+   -ms-flex-pack: $justify-content;
+   justify-content: $justify-content;
+   -ms-flex-wrap: $flex-wrap;
+   flex-wrap: $flex-wrap;
+   -webkit-box-orient: vertical;
+   -webkit-box-direction: normal;
+   -ms-flex-direction: $flex-direction;
+   flex-direction: $flex-direction;
+}
+
+@mixin smooth-btn($speed: 0.3s) {
+   -webkit-transition: background $speed, color $speed, border-color $speed;
+   -o-transition: background $speed, color $speed, border-color $speed;
+   transition: background $speed, color $speed, border-color $speed;
+}
