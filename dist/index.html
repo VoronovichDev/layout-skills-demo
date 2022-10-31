@@ -1,7 +1,40 @@
-@@include('html/head.html', { "title": "Main" })
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.min.css" />
+    <title>Main</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oxanium:wght@500;600;700&family=Work+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body></body>
+</html>
+
 <main>
   <div class="first">
-    @@include('html/header.html', {})
+    <header class="header">
+  <div class="container">
+    <div class="header__main">
+      <img src="img/logo.png" alt="logo" />
+      <div class="header__inner">
+        <div class="header__links">
+          <a href="#" class="header__link">Explore</a>
+          <a href="#" class="header__link">Creators</a>
+          <a href="#" class="header__link">Community</a>
+        </div>
+        <button class="header__btn">Connect Wallet</button>
+      </div>
+    </div>
+  </div>
+</header>
+
 
     <div class="container">
       <div class="first__main">
@@ -55,4 +88,13 @@
     </button>
   </div>
 </main>
-@@include('html/footer.html', {})
+	<footer class="footer">
+		<div class="container">
+			
+		</div>
+	</footer>
+
+	<script src="js/app.min.js"></script>
+	</body>
+
+	</html>

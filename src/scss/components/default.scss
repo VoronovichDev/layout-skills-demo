@@ -3,7 +3,7 @@ body {
    position: relative;
    color: $white2;
    @include font('Work Sans', 400);
-
+   background: $black;
    &.active-body {
       overflow: hidden;
    }
