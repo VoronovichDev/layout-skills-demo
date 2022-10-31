@@ -726,6 +726,47 @@ button {
   margin: 0 auto;
 }
 
+.title {
+  font-family: "Oxanium";
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 130px;
+  color: #f5fbf2;
+  position: relative;
+}
+.title:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%) translateX(-35%);
+  -ms-transform: translateY(-50%) translateX(-35%);
+  transform: translateY(-50%) translateX(-35%);
+  background: #8613a5;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+}
+.title span {
+  z-index: 2;
+  text-align: center;
+  position: relative;
+}
+
+.title-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.swiper {
+  padding-top: 100px !important;
+  overflow: visible !important;
+}
+
 /**
  * Swiper 7.0.6
  * Most modern mobile touch slider and framework with hardware accelerated transitions
@@ -983,12 +1024,10 @@ button {
 .swiper-button-prev,
 .swiper-button-next {
   position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-  width: 40px;
-  height: 40px;
+  top: 0;
+  width: 54px;
+  height: 54px;
+  overflow: hidden;
   z-index: 10;
   cursor: pointer;
   display: -webkit-box;
@@ -1001,6 +1040,12 @@ button {
   -ms-flex-pack: center;
   justify-content: center;
   color: var(--swiper-navigation-color, var(--swiper-theme-color));
+}
+.swiper-button-prev img,
+.swiper-button-next img {
+  -webkit-transform: scale(5);
+  -ms-transform: scale(5);
+  transform: scale(5);
 }
 @media (max-width: 600px) {
   .swiper-button-prev,
@@ -1040,7 +1085,13 @@ button {
 
 .swiper-button-prev,
 .swiper-rtl .swiper-button-next {
-  left: 20px;
+  right: 100px;
+}
+.swiper-button-prev img,
+.swiper-rtl .swiper-button-next img {
+  -webkit-transform: scale(5) rotate(180deg);
+  -ms-transform: scale(5) rotate(180deg);
+  transform: scale(5) rotate(180deg);
 }
 @media (max-width: 1400px) {
   .swiper-button-prev,
@@ -1170,7 +1221,7 @@ button {
   transform: translate(-50%, -50%);
   width: 22px;
   height: 22px;
-  border: 1px solid #531fb5;
+  border: 1px solid #8613a5;
   display: none;
   border-radius: 50%;
 }
@@ -1191,7 +1242,7 @@ button.swiper-pagination-bullet {
 }
 
 .swiper-pagination-bullet-active {
-  background-color: #531fb5;
+  background-color: #8613a5;
 }
 .swiper-pagination-bullet-active:after {
   display: block;
@@ -3499,6 +3550,270 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   height: 156px;
   z-index: 10;
 }
-.first__arrow-btn img {
+.companies__main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+}
+.companies__main img {
+  width: 18%;
+}
+
+.companies {
+  margin: 250px 0 160px 0;
+}
+
+.auctions__img {
+  position: relative;
+}
+.auctions__img img {
+  display: block;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+.auctions__img div {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: -o-linear-gradient(324.67deg, #8613a5 18.61%, rgba(250, 250, 250, 0.65) 137.4%);
+  background: linear-gradient(125.33deg, #8613a5 18.61%, rgba(250, 250, 250, 0.65) 137.4%);
+  opacity: 0.95;
+  -webkit-box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.12);
+  -webkit-backdrop-filter: blur(22.5px);
+  backdrop-filter: blur(22.5px);
+  border-radius: 0px;
+  padding: 15px 45px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 35px;
+  letter-spacing: 0.02em;
+  color: #f5fbf2;
+}
+
+.auctions__item {
+  background: #3d2942;
+  padding: 32px;
+}
+
+.auctions-profile__guy {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.auctions-profile__guy img {
+  display: block;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 16px;
+}
+
+.auctions-profile__owner {
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 35px;
+  color: #f5fbf2;
+}
+
+.auctions-profile__nick {
+  font-size: 20px;
+  line-height: 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #bdaac1;
+}
+
+.auctions-bid__title {
+  font-size: 24px;
+  line-height: 35px;
+  color: #c6bfc8;
+}
+
+.auctions-bid__price {
+  font-family: "Oxanium";
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 35px;
+}
+
+.auctions__profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin: 28px 0;
+}
+
+.auctions__bid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.auctions__btn {
+  display: block;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 35px;
+  letter-spacing: 0.05em;
+  background: rgba(233, 215, 167, 0.1);
+  border: 1px solid #fde8b3;
+  width: 100%;
+  margin-top: 40px;
+  padding: 21px 0;
+}
+
+.auctions-profile__likes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.auctions-profile__likes img {
   width: 25px;
+  -webkit-transform: scale(4);
+  -ms-transform: scale(4);
+  transform: scale(4);
+}
+.auctions-profile__likes span {
+  font-size: 32px;
+  line-height: 35px;
+  color: #76607a;
+}
+
+.title-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-bottom: 85px;
+}
+
+.auctions__view-all {
+  margin: 84px auto 0;
+  padding: 24px 64px;
+  border: 1px solid #ffce4e;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 35px;
+  letter-spacing: 0.05em;
+  display: block;
+}
+
+.auctions {
+  overflow: hidden;
+  padding-bottom: 80px;
+}
+
+.how__title {
+  font-family: "Oxanium";
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 130px;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.how {
+  padding-top: 185px;
+}
+
+.how__icon {
+  background: #372839;
+  border-radius: 50%;
+  width: 106px;
+  height: 106px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-bottom: 32px;
+  position: relative;
+}
+.how__icon img {
+  -webkit-transform: scale(2.5);
+  -ms-transform: scale(2.5);
+  transform: scale(2.5);
+}
+.how__icon:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -50%;
+  -webkit-transform: translateY(-50%) translateX(100%);
+  -ms-transform: translateY(-50%) translateX(100%);
+  transform: translateY(-50%) translateX(100%);
+  background: url("../../img/how-elem.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 165px;
+  height: 10px;
+}
+
+.how-item__title {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 28px;
+  text-transform: capitalize;
+  color: #ffce4e;
+}
+
+.how__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.how__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.how__item:last-child .how__icon::after {
+  display: none;
 }

@@ -1,0 +1,17 @@
+.companies__main {
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   -webkit-box-align: center;
+   -ms-flex-align: center;
+   align-items: center;
+   -ms-flex-pack: distribute;
+   justify-content: space-around;
+   img {
+      width: 18%;
+   }
+}
+
+.companies {
+   margin: 250px 0 160px 0;
+}

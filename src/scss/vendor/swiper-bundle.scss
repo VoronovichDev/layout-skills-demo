@@ -257,12 +257,10 @@
 .swiper-button-prev,
 .swiper-button-next {
    position: absolute;
-   top: 50%;
-   -webkit-transform: translateY(-50%);
-   -ms-transform: translateY(-50%);
-   transform: translateY(-50%);
-   width: 40px;
-   height: 40px;
+   top: 0;
+   width: 54px;
+   height: 54px;
+   overflow: hidden;
    z-index: 10;
    cursor: pointer;
    display: -webkit-box;
@@ -275,6 +273,12 @@
    -ms-flex-pack: center;
    justify-content: center;
    color: var(--swiper-navigation-color, var(--swiper-theme-color));
+
+   img {
+      -webkit-transform: scale(5);
+      -ms-transform: scale(5);
+      transform: scale(5);
+   }
 
    @media ($media_sm) {
       width: 15px;
@@ -299,13 +303,9 @@
    font-variant: initial;
    line-height: 1;
    font-size: 20px;
-
    -webkit-transition: color 0.3s;
-
    -o-transition: color 0.3s;
-
    transition: color 0.3s;
-
    @media ($media_sm) {
       font-size: 18px;
    }
@@ -313,8 +313,12 @@
 
 .swiper-button-prev,
 .swiper-rtl .swiper-button-next {
-   left: 20px;
-
+   right: 100px;
+   img {
+      -webkit-transform: scale(5) rotate(180deg);
+      -ms-transform: scale(5) rotate(180deg);
+      transform: scale(5) rotate(180deg);
+   }
    @media ($media_xxxl) {
       left: 0;
    }
