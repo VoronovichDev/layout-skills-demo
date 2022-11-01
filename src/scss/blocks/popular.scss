@@ -1,0 +1,70 @@
+.popular {
+   margin-top: 175px;
+
+   .auctions__img {
+      img {
+         max-height: 270px;
+      }
+   }
+   .auctions-profile__nick {
+      font-weight: 500;
+      font-size: 32px;
+      line-height: 36px;
+      color: #f5fbf2;
+   }
+   .auctions-profile__likes {
+      span {
+         font-weight: 600;
+         font-size: 20px;
+         line-height: 35px;
+         color: #c2b5c6;
+      }
+   }
+   .auctions__profile {
+      margin-bottom: 0;
+   }
+}
+
+.popular__main {
+   position: relative;
+
+   &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 200px;
+      height: 100%;
+      background: -o-linear-gradient(right, rgba(#000, 0.7), rgba(#000, 0));
+      background: -webkit-gradient(linear, right top, left top, from(rgba(#000, 0.7)), to(rgba(#000, 0)));
+      background: linear-gradient(to left, rgba(#000, 0.7), rgba(#000, 0));
+      filter: blur(8px);
+      -webkit-filter: blur(8px);
+      z-index: 2;
+   }
+}
+
+.swiper-button-prev2,
+.swiper-button-next2 {
+   top: 50%;
+   -webkit-transform: translateY(-50%);
+   -ms-transform: translateY(-50%);
+   transform: translateY(-50%);
+}
+.swiper-button-prev2 {
+   left: 0;
+}
+.swiper-button-next2 {
+   right: 100px;
+}
+
+.popular-slider {
+   padding: 0 !important;
+}
+
+.swiper-button-prev2.swiper-button-disabled,
+.swiper-button-next2.swiper-button-disabled {
+   display: none;
+   cursor: auto;
+   pointer-events: none;
+}

@@ -28,3 +28,17 @@ const swiper = new Swiper('.auctions-slider', {
   freeMode: true,
   grabCursor: true,
 });
+
+const swiper2 = new Swiper('.popular-slider', {
+  navigation: {
+    nextEl: '.swiper-button-next2',
+    prevEl: '.swiper-button-prev2',
+  },
+  modules: [Navigation, FreeMode],
+  autoHeight: true,
+  speed: 500,
+  slidesPerView: 2.5,
+  spaceBetween: 42,
+  freeMode: true,
+  grabCursor: true,
+});

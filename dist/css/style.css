@@ -742,7 +742,6 @@ button {
   -webkit-transform: translateY(-50%) translateX(-35%);
   -ms-transform: translateY(-50%) translateX(-35%);
   transform: translateY(-50%) translateX(-35%);
-  background: #8613a5;
   width: 110px;
   height: 110px;
   border-radius: 50%;
@@ -751,6 +750,12 @@ button {
   z-index: 2;
   text-align: center;
   position: relative;
+}
+.title--purple::after {
+  background: #8613a5;
+}
+.title--red::after {
+  background: #e03054;
 }
 
 .title-wrapper {
@@ -3614,6 +3619,8 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   border-radius: 50%;
   overflow: hidden;
   margin-right: 16px;
+  width: 64px;
+  height: 64px;
 }
 
 .auctions-profile__owner {
@@ -3816,4 +3823,71 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 }
 .how__item:last-child .how__icon::after {
   display: none;
+}
+
+.popular {
+  margin-top: 175px;
+}
+.popular .auctions__img img {
+  max-height: 270px;
+}
+.popular .auctions-profile__nick {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 36px;
+  color: #f5fbf2;
+}
+.popular .auctions-profile__likes span {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 35px;
+  color: #c2b5c6;
+}
+.popular .auctions__profile {
+  margin-bottom: 0;
+}
+
+.popular__main {
+  position: relative;
+}
+.popular__main:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 200px;
+  height: 100%;
+  background: -o-linear-gradient(right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+  background: -webkit-gradient(linear, right top, left top, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0)));
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+  z-index: 2;
+}
+
+.swiper-button-prev2,
+.swiper-button-next2 {
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.swiper-button-prev2 {
+  left: 0;
+}
+
+.swiper-button-next2 {
+  right: 100px;
+}
+
+.popular-slider {
+  padding: 0 !important;
+}
+
+.swiper-button-prev2.swiper-button-disabled,
+.swiper-button-next2.swiper-button-disabled {
+  display: none;
+  cursor: auto;
+  pointer-events: none;
 }
