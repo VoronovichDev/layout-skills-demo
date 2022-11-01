@@ -42,3 +42,17 @@ const swiper2 = new Swiper('.popular-slider', {
   freeMode: true,
   grabCursor: true,
 });
+
+const swiper3 = new Swiper('.categories-slider', {
+  navigation: {
+    nextEl: '.swiper-button-next3',
+    prevEl: '.swiper-button-prev3',
+  },
+  modules: [Navigation, FreeMode],
+  autoHeight: true,
+  speed: 500,
+  slidesPerView: 3,
+  spaceBetween: 42,
+  freeMode: true,
+  grabCursor: true,
+});
