@@ -121,6 +121,13 @@
    width: 100%;
    margin-top: 40px;
    padding: 21px 0;
+   -webkit-transition: all 0.3s;
+   -o-transition: all 0.3s;
+   transition: all 0.3s;
+
+   &:hover {
+      background: darken(rgba(233, 215, 167, 0.1), 60);
+   }
 }
 
 .auctions-profile__likes {
@@ -162,6 +169,15 @@
    line-height: 35px;
    letter-spacing: 0.05em;
    display: block;
+
+   -webkit-transition: all 0.3s;
+   -o-transition: all 0.3s;
+   transition: all 0.3s;
+
+   &:hover {
+      background: #ffce4e;
+      color: #000;
+   }
 }
 
 .auctions {

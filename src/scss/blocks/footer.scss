@@ -82,5 +82,12 @@
       font-size: 20px;
       line-height: 50px;
       color: #96839b;
+      -webkit-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      transition: all 0.3s;
+
+      &:hover {
+         color: $yellow;
+      }
    }
 }

@@ -3348,6 +3348,13 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   color: #ffce4e;
   background: rgba(233, 215, 167, 0.1);
   border: 1px solid #ffce4e;
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.header__btn:hover {
+  -webkit-box-shadow: 0px 0px 15px 5px rgba(255, 206, 78, 0.35);
+  box-shadow: 0px 0px 15px 5px rgba(255, 206, 78, 0.35);
 }
 
 .first {
@@ -3402,11 +3409,25 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 .first__btn {
   background: #ffce4e;
   color: #000000;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.first__btn:hover {
+  color: #ffce4e;
+  background: #000;
 }
 
 .first__btn2 {
   background: rgba(233, 215, 167, 0.1);
   border: 1px solid #ffce4e;
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.first__btn2:hover {
+  -webkit-box-shadow: 0px 0px 15px 5px rgba(255, 206, 78, 0.35);
+  box-shadow: 0px 0px 15px 5px rgba(255, 206, 78, 0.35);
 }
 
 .first__numbers {
@@ -3535,6 +3556,13 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   font-size: 24px;
   line-height: 28px;
   color: #000000;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.first-nft__btn:hover {
+  color: #ffce4e;
+  background: #000;
 }
 
 .first__item {
@@ -3558,7 +3586,14 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   width: 156px;
   height: 156px;
   z-index: 10;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
 }
+.first__arrow-btn:hover {
+  background: rgba(60, 8, 74, 0.4);
+}
+
 .companies__main {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3697,6 +3732,12 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   width: 100%;
   margin-top: 40px;
   padding: 21px 0;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.auctions__btn:hover {
+  background: rgba(75, 60, 19, 0.1);
 }
 
 .auctions-profile__likes {
@@ -3738,6 +3779,13 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   line-height: 35px;
   letter-spacing: 0.05em;
   display: block;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.auctions__view-all:hover {
+  background: #ffce4e;
+  color: #000;
 }
 
 .auctions {
@@ -3948,6 +3996,10 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   transition: all 0.3s;
   z-index: 2;
   white-space: nowrap;
+}
+.categories-slider .auctions__img button:hover {
+  -webkit-box-shadow: 0px 0px 15px 5px rgba(255, 206, 78, 0.35);
+  box-shadow: 0px 0px 15px 5px rgba(255, 206, 78, 0.35);
 }
 
 .creators {
@@ -4194,4 +4246,10 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   font-size: 20px;
   line-height: 50px;
   color: #96839b;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.footer__links a:hover {
+  color: #ffce4e;
 }

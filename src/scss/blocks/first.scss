@@ -51,12 +51,28 @@
 .first__btn {
    background: $yellow;
    color: #000000;
+   -webkit-transition: all 0.3s;
+   -o-transition: all 0.3s;
+   transition: all 0.3s;
+
+   &:hover {
+      color: $yellow;
+      background: #000;
+   }
 }
 
 .first__btn2 {
    background: rgba(233, 215, 167, 0.1);
-
    border: 1px solid #ffce4e;
+
+   -webkit-transition: all 0.2s;
+   -o-transition: all 0.2s;
+   transition: all 0.2s;
+
+   &:hover {
+      -webkit-box-shadow: 0px 0px 15px 5px rgba(255, 206, 78, 0.35);
+      box-shadow: 0px 0px 15px 5px rgba(255, 206, 78, 0.35);
+   }
 }
 
 .first__numbers {
@@ -184,6 +200,14 @@
    font-size: 24px;
    line-height: 28px;
    color: #000000;
+   -webkit-transition: all 0.3s;
+   -o-transition: all 0.3s;
+   transition: all 0.3s;
+
+   &:hover {
+      color: $yellow;
+      background: #000;
+   }
 }
 
 .first__item {
@@ -207,7 +231,12 @@
    width: 156px;
    height: 156px;
    z-index: 10;
-   img {
-      // width: 25px;
+
+   -webkit-transition: all 0.3s;
+   -o-transition: all 0.3s;
+   transition: all 0.3s;
+
+   &:hover {
+      background: darken(rgba(134, 19, 165, 0.4), 20);
    }
 }
