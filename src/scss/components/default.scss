@@ -4,6 +4,7 @@ html {
 
 body {
    overflow-x: hidden;
+   // overflow-y: auto;
    position: relative;
    color: $white2;
    @include font('Work Sans', 400);

@@ -3462,7 +3462,7 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   padding-top: 37px;
   min-height: 100%;
   position: relative;
-  background-image: url("../../img//bg-effect.png");
+  background: url("../img/bg-effect.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
@@ -4131,7 +4131,7 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 .auctions {
   overflow: hidden;
   padding-bottom: 80px;
-  background-image: url("../../img/auctions-effect.png");
+  background: url("../img/auctions-effect.png");
   background-repeat: no-repeat;
   background-position: 0 -50px;
 }
@@ -4152,7 +4152,7 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 
 .how {
   padding-top: 185px;
-  background-image: url("../../img/how-effect.png");
+  background: url("../img/how-effect.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: 50% 0;
@@ -4186,7 +4186,7 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   -webkit-transform: translateY(-50%) translateX(100%);
   -ms-transform: translateY(-50%) translateX(100%);
   transform: translateY(-50%) translateX(100%);
-  background: url("../../img/how-elem.svg");
+  background: url("../img/how-elem.svg");
   background-repeat: no-repeat;
   background-size: contain;
   width: 165px;
@@ -4282,7 +4282,7 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 
 .popular {
   margin-top: 175px;
-  background-image: url("../../img/popular-effect.png");
+  background: url("../img/popular-effect.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: 0 -50px;
@@ -4574,7 +4574,7 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 }
 
 .subscribe {
-  background: url("../../img/subscribe.png");
+  background: url("../img/subscribe.png");
   background-repeat: no-repeat;
   background-size: cover;
   margin-top: 80px;
@@ -4588,7 +4588,7 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   right: 10%;
   width: 600px;
   height: 400px;
-  background-image: url("../../img/popular-effect.png");
+  background: url("../img/popular-effect.png");
   background-repeat: no-repeat;
   background-size: cover;
 }

@@ -1,5 +1,6 @@
 {
   "name": "skill-practice-website",
+  "homepage": "https://voronovichdev.github.io/layout-skills-demo",
   "version": "1.0.0",
   "description": "",
   "main": "gulpfile.js",
@@ -9,7 +10,8 @@
     "build": "gulp build --build",
     "svgSprive": "gulp svgSprive",
     "zip": "gulp deployZIP --build",
-    "deploy": "gulp deployFTP --build"
+    "deploy": "gulp deployFTP --build",
+    "deployGhPages": "gulp build && gh-pages -d dist"
   },
   "author": "",
   "license": "ISC",
@@ -17,11 +19,13 @@
     "aos": "^2.3.4",
     "browser-sync": "latest",
     "del": "latest",
+    "gh-pages": "^4.0.0",
     "gulp": "latest",
     "gulp-autoprefixer": "latest",
     "gulp-clean-css": "latest",
     "gulp-file-include": "latest",
     "gulp-fonter": "latest",
+    "gulp-gh-pages": "^0.5.4",
     "gulp-group-css-media-queries": "latest",
     "gulp-if": "latest",
     "gulp-imagemin": "latest",
