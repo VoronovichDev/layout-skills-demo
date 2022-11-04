@@ -5,6 +5,10 @@
    line-height: 130px;
    margin-bottom: 25px;
    text-align: center;
+
+   @media (max-width: 600px) {
+      font-size: 36px;
+   }
 }
 
 .how {
@@ -29,9 +33,7 @@
    position: relative;
 
    img {
-      -webkit-transform: scale(2.5);
-      -ms-transform: scale(2.5);
-      transform: scale(2.5);
+      max-width: 50%;
    }
    &:after {
       content: '';
@@ -43,9 +45,25 @@
       transform: translateY(-50%) translateX(100%);
       background: url('../../img/how-elem.svg');
       background-repeat: no-repeat;
-      background-size: cover;
+      background-size: contain;
       width: 165px;
       height: 10px;
+   }
+   @media (max-width: 1200px) {
+      &:after {
+         right: -30%;
+         width: 100px;
+      }
+   }
+   @media (max-width: 500px) {
+      &:after {
+         top: 100%;
+         -webkit-transform: translateX(-100%) translateY(100%) rotate(90deg);
+         -ms-transform: translateX(-100%) translateY(100%) rotate(90deg);
+         transform: translateX(-100%) translateY(100%) rotate(90deg);
+         height: 80px;
+         width: 80px;
+      }
    }
 }
 
@@ -55,6 +73,9 @@
    line-height: 28px;
    text-transform: capitalize;
    color: #ffce4e;
+   @media (max-width: 700px) {
+      font-size: 18px;
+   }
 }
 
 .how__items {
@@ -67,6 +88,19 @@
    -webkit-box-pack: justify;
    -ms-flex-pack: justify;
    justify-content: space-between;
+
+   @media (max-width: 1000px) {
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      gap: 50px 0;
+   }
+   @media (max-width: 500px) {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      gap: 128px 0;
+   }
 }
 
 .how__item {
@@ -80,10 +114,32 @@
    -webkit-box-align: center;
    -ms-flex-align: center;
    align-items: center;
+
    &:last-child {
       .how__icon {
          &::after {
             display: none;
+         }
+      }
+   }
+
+   @media (max-width: 1000px) {
+      -ms-flex-preferred-size: 49%;
+      flex-basis: 49%;
+      &:nth-child(2) {
+         .how__icon {
+            &::after {
+               display: none;
+            }
+         }
+      }
+   }
+   @media (max-width: 500px) {
+      &:nth-child(2) {
+         .how__icon {
+            &::after {
+               display: block;
+            }
          }
       }
    }

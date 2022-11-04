@@ -64,6 +64,21 @@ button {
          background: $red;
       }
    }
+
+   @media (max-width: 800px) {
+      font-size: 34px;
+   }
+
+   @media (max-width: 600px) {
+      font-size: 30px;
+      &:after {
+         -webkit-transform: translateY(-50%) translateX(-35%);
+         -ms-transform: translateY(-50%) translateX(-35%);
+         transform: translateY(-50%) translateX(-35%);
+         width: 85px;
+         height: 85px;
+      }
+   }
 }
 
 .title-wrapper {
@@ -78,4 +93,14 @@ button {
 .swiper {
    padding-top: 100px !important;
    overflow: visible !important;
+   @media (max-width: 600px) {
+      padding-top: 0 !important;
+   }
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+   @media (max-width: 600px) {
+      display: none !important;
+   }
 }

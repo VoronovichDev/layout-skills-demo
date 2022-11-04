@@ -757,6 +757,23 @@ button {
 .title--red::after {
   background: #e03054;
 }
+@media (max-width: 800px) {
+  .title {
+    font-size: 34px;
+  }
+}
+@media (max-width: 600px) {
+  .title {
+    font-size: 30px;
+  }
+  .title:after {
+    -webkit-transform: translateY(-50%) translateX(-35%);
+    -ms-transform: translateY(-50%) translateX(-35%);
+    transform: translateY(-50%) translateX(-35%);
+    width: 85px;
+    height: 85px;
+  }
+}
 
 .title-wrapper {
   display: -webkit-box;
@@ -770,6 +787,18 @@ button {
 .swiper {
   padding-top: 100px !important;
   overflow: visible !important;
+}
+@media (max-width: 600px) {
+  .swiper {
+    padding-top: 0 !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .swiper-button-prev,
+.swiper-button-next {
+    display: none !important;
+  }
 }
 
 /**
@@ -1046,12 +1075,6 @@ button {
   justify-content: center;
   color: var(--swiper-navigation-color, var(--swiper-theme-color));
 }
-.swiper-button-prev img,
-.swiper-button-next img {
-  -webkit-transform: scale(5);
-  -ms-transform: scale(5);
-  transform: scale(5);
-}
 @media (max-width: 600px) {
   .swiper-button-prev,
 .swiper-button-next {
@@ -1094,9 +1117,9 @@ button {
 }
 .swiper-button-prev img,
 .swiper-rtl .swiper-button-next img {
-  -webkit-transform: scale(5) rotate(180deg);
-  -ms-transform: scale(5) rotate(180deg);
-  transform: scale(5) rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 @media (max-width: 1400px) {
   .swiper-button-prev,
@@ -3328,6 +3351,11 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   -ms-flex-align: center;
   align-items: center;
 }
+@media (max-width: 700px) {
+  .header__inner {
+    display: none;
+  }
+}
 
 .header__links {
   display: -webkit-box;
@@ -3338,6 +3366,12 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   align-items: center;
   margin-right: 160px;
   gap: 60px;
+}
+@media (max-width: 900px) {
+  .header__links {
+    margin-right: 30px;
+    gap: 25px;
+  }
 }
 
 .header__btn {
@@ -3355,6 +3389,22 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 .header__btn:hover {
   -webkit-box-shadow: 0px 0px 15px 5px rgba(255, 206, 78, 0.35);
   box-shadow: 0px 0px 15px 5px rgba(255, 206, 78, 0.35);
+}
+
+.header__burger {
+  display: none;
+}
+.header__burger img {
+  width: 40px;
+}
+@media (max-width: 700px) {
+  .header__burger {
+    display: block;
+  }
+}
+
+.header__burger--close {
+  display: none;
 }
 
 .first {
@@ -3375,6 +3425,20 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   -ms-flex-pack: justify;
   justify-content: space-between;
 }
+@media (max-width: 850px) {
+  .first__main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+  }
+}
 
 .h1 {
   font-family: "Oxanium";
@@ -3385,6 +3449,24 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 }
 .h1 span {
   color: #ffce4e;
+}
+@media (max-width: 1100px) {
+  .h1 {
+    font-size: 50px;
+    line-height: 150%;
+  }
+}
+@media (max-width: 850px) {
+  .h1 {
+    text-align: center;
+  }
+}
+@media (max-width: 500px) {
+  .h1 {
+    font-size: 42px;
+    max-width: 80%;
+    margin: 0 auto;
+  }
 }
 
 .first__btns {
@@ -3397,6 +3479,21 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   gap: 48px;
   margin: 75px 0 120px 0;
 }
+@media (max-width: 900px) {
+  .first__btns {
+    gap: 15px;
+    margin: 50px 0;
+  }
+}
+@media (max-width: 850px) {
+  .first__btns {
+    margin: 50px;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    gap: 20px;
+  }
+}
 
 .first__btn,
 .first__btn2 {
@@ -3404,6 +3501,25 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   font-weight: 600;
   font-size: 28px;
   line-height: 36px;
+}
+@media (max-width: 1100px) {
+  .first__btn,
+.first__btn2 {
+    padding: 15px 45px;
+  }
+}
+@media (max-width: 900px) {
+  .first__btn,
+.first__btn2 {
+    padding: 15px 25px;
+  }
+}
+@media (max-width: 850px) {
+  .first__btn,
+.first__btn2 {
+    -ms-flex-preferred-size: 48%;
+    flex-basis: 48%;
+  }
 }
 
 .first__btn {
@@ -3441,6 +3557,20 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   -ms-flex-pack: justify;
   justify-content: space-between;
 }
+.first__numbers--fake {
+  display: none;
+}
+@media (max-width: 850px) {
+  .first__numbers {
+    display: none;
+  }
+  .first__numbers--fake {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 70px;
+  }
+}
 
 .first__number {
   font-family: "Work Sans";
@@ -3449,12 +3579,22 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   line-height: 35px;
   color: #9b9e9a;
 }
+@media (max-width: 1100px) {
+  .first__number {
+    font-size: 20px;
+  }
+}
 .first__number p {
   font-family: "Oxanium";
   font-weight: 700;
   font-size: 62px;
   line-height: 78px;
   color: #f5fbf2;
+}
+@media (max-width: 1100px) {
+  .first__number p {
+    font-size: 40px;
+  }
 }
 
 .frist-nft__header {
@@ -3478,6 +3618,11 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   -ms-flex-pack: justify;
   justify-content: space-between;
 }
+@media (max-width: 500px) {
+  .frist-nft__header {
+    padding: 10px 22px;
+  }
+}
 
 .first__nft {
   background: url("../img/nft-item.jpg");
@@ -3496,14 +3641,39 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   justify-content: space-between;
   padding-top: 25px;
 }
+@media (max-width: 1280px) {
+  .first__nft {
+    margin-left: 20px;
+  }
+}
+@media (max-width: 1100px) {
+  .first__nft {
+    height: 530px;
+  }
+}
+@media (max-width: 850px) {
+  .first__nft {
+    margin-left: 0;
+  }
+}
+@media (max-width: 500px) {
+  .first__nft {
+    height: 380px;
+  }
+}
 
 .nft-header__title {
   font-family: "Oxanium";
   font-weight: 500;
   font-size: 18px;
-  line-height: 22px;
+  line-height: 130%;
   letter-spacing: 0.08em;
   text-transform: capitalize;
+}
+@media (max-width: 500px) {
+  .nft-header__title {
+    font-size: 16px;
+  }
 }
 
 .nft-header__numbers {
@@ -3511,12 +3681,17 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   font-style: normal;
   font-weight: 700;
   font-size: 32px;
-  line-height: 40px;
+  line-height: 130%;
+}
+@media (max-width: 500px) {
+  .nft-header__numbers {
+    font-size: 22px;
+  }
 }
 
 .first-nft__footer {
   width: 100%;
-  background: #b5c8db;
+  background: #ffffff;
   -webkit-backdrop-filter: blur(13.5px);
   backdrop-filter: blur(13.5px);
   border-radius: 0px;
@@ -3531,20 +3706,39 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   justify-content: space-between;
   padding: 35px 50px;
 }
+@media (max-width: 1100px) {
+  .first-nft__footer {
+    padding: 30px;
+  }
+}
+@media (max-width: 500px) {
+  .first-nft__footer {
+    padding: 15px 27px 15px 44px;
+  }
+}
 
 .nft-footer__title {
   font-family: "Oxanium";
   font-weight: 600;
   font-size: 28px;
-  line-height: 35px;
   letter-spacing: 0.07em;
   color: #16091b;
+}
+@media (max-width: 500px) {
+  .nft-footer__title {
+    font-size: 18px;
+  }
 }
 
 .nft-footer__nick {
   font-size: 24px;
   line-height: 35px;
   color: #594d5e;
+}
+@media (max-width: 500px) {
+  .nft-footer__nick {
+    font-size: 14px;
+  }
 }
 
 .first-nft__btn {
@@ -3563,6 +3757,12 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 .first-nft__btn:hover {
   color: #ffce4e;
   background: #000;
+}
+@media (max-width: 500px) {
+  .first-nft__btn {
+    padding: 8px 23px;
+    font-size: 16px;
+  }
 }
 
 .first__item {
@@ -3590,8 +3790,16 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   -o-transition: all 0.3s;
   transition: all 0.3s;
 }
+.first__arrow-btn img {
+  max-width: 30%;
+}
 .first__arrow-btn:hover {
   background: rgba(60, 8, 74, 0.4);
+}
+@media (max-width: 850px) {
+  .first__arrow-btn {
+    display: none;
+  }
 }
 
 .companies__main {
@@ -3603,13 +3811,26 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   align-items: center;
   -ms-flex-pack: distribute;
   justify-content: space-around;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 .companies__main img {
   width: 18%;
 }
+@media (max-width: 900px) {
+  .companies__main img {
+    width: 33%;
+  }
+}
 
 .companies {
   margin: 250px 0 160px 0;
+}
+@media (max-width: 850px) {
+  .companies {
+    margin: 75px 0 95px 0;
+  }
 }
 
 .auctions__img {
@@ -3639,12 +3860,38 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   font-size: 24px;
   line-height: 35px;
   letter-spacing: 0.02em;
-  color: #f5fbf2;
+}
+@media (max-width: 1300px) {
+  .auctions__img div {
+    font-size: 18px;
+    padding: 10px 25px;
+  }
 }
 
 .auctions__item {
   background: #3d2942;
   padding: 32px;
+}
+@media (max-width: 900px) {
+  .auctions__item {
+    padding: 20px 15px;
+  }
+}
+
+@media (max-width: 600px) {
+  .auctions-slide {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .swiper-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 48px;
+  }
 }
 
 .auctions-profile__guy {
@@ -3663,12 +3910,23 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   width: 64px;
   height: 64px;
 }
+@media (max-width: 800px) {
+  .auctions-profile__guy img {
+    width: 40px;
+    height: 40px;
+  }
+}
 
 .auctions-profile__owner {
   font-weight: 500;
   font-size: 28px;
   line-height: 35px;
   color: #f5fbf2;
+}
+@media (max-width: 1300px) {
+  .auctions-profile__owner {
+    font-size: 20px;
+  }
 }
 
 .auctions-profile__nick {
@@ -3688,12 +3946,22 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   line-height: 35px;
   color: #c6bfc8;
 }
+@media (max-width: 720px) {
+  .auctions-bid__title {
+    font-size: 18px;
+  }
+}
 
 .auctions-bid__price {
   font-family: "Oxanium";
   font-weight: 700;
   font-size: 24px;
   line-height: 35px;
+}
+@media (max-width: 720px) {
+  .auctions-bid__price {
+    font-size: 18px;
+  }
 }
 
 .auctions__profile {
@@ -3750,14 +4018,20 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 }
 .auctions-profile__likes img {
   width: 25px;
-  -webkit-transform: scale(4);
-  -ms-transform: scale(4);
-  transform: scale(4);
 }
 .auctions-profile__likes span {
   font-size: 32px;
   line-height: 35px;
   color: #76607a;
+}
+@media (max-width: 720px) {
+  .auctions-profile__likes img {
+    width: 15px;
+  }
+  .auctions-profile__likes span {
+    font-size: 20px;
+    line-height: 35px;
+  }
 }
 
 .title-wrapper {
@@ -3787,6 +4061,13 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   background: #ffce4e;
   color: #000;
 }
+@media (max-width: 500px) {
+  .auctions__view-all {
+    font-size: 18px;
+    padding: 12px 58px;
+    margin: 48px auto 0;
+  }
+}
 
 .auctions {
   overflow: hidden;
@@ -3800,6 +4081,11 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   line-height: 130px;
   margin-bottom: 25px;
   text-align: center;
+}
+@media (max-width: 600px) {
+  .how__title {
+    font-size: 36px;
+  }
 }
 
 .how {
@@ -3824,9 +4110,7 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   position: relative;
 }
 .how__icon img {
-  -webkit-transform: scale(2.5);
-  -ms-transform: scale(2.5);
-  transform: scale(2.5);
+  max-width: 50%;
 }
 .how__icon:after {
   content: "";
@@ -3838,9 +4122,25 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   transform: translateY(-50%) translateX(100%);
   background: url("../../img/how-elem.svg");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   width: 165px;
   height: 10px;
+}
+@media (max-width: 1200px) {
+  .how__icon:after {
+    right: -30%;
+    width: 100px;
+  }
+}
+@media (max-width: 500px) {
+  .how__icon:after {
+    top: 100%;
+    -webkit-transform: translateX(-100%) translateY(100%) rotate(90deg);
+    -ms-transform: translateX(-100%) translateY(100%) rotate(90deg);
+    transform: translateX(-100%) translateY(100%) rotate(90deg);
+    height: 80px;
+    width: 80px;
+  }
 }
 
 .how-item__title {
@@ -3849,6 +4149,11 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   line-height: 28px;
   text-transform: capitalize;
   color: #ffce4e;
+}
+@media (max-width: 700px) {
+  .how-item__title {
+    font-size: 18px;
+  }
 }
 
 .how__items {
@@ -3861,6 +4166,22 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+}
+@media (max-width: 1000px) {
+  .how__items {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    gap: 50px 0;
+  }
+}
+@media (max-width: 500px) {
+  .how__items {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 128px 0;
+  }
 }
 
 .how__item {
@@ -3878,6 +4199,20 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 .how__item:last-child .how__icon::after {
   display: none;
 }
+@media (max-width: 1000px) {
+  .how__item {
+    -ms-flex-preferred-size: 49%;
+    flex-basis: 49%;
+  }
+  .how__item:nth-child(2) .how__icon::after {
+    display: none;
+  }
+}
+@media (max-width: 500px) {
+  .how__item:nth-child(2) .how__icon::after {
+    display: block;
+  }
+}
 
 .popular {
   margin-top: 175px;
@@ -3890,6 +4225,11 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   font-size: 32px;
   line-height: 36px;
   color: #f5fbf2;
+}
+@media (max-width: 900px) {
+  .popular .auctions-profile__nick {
+    font-size: 16px;
+  }
 }
 .popular .auctions-profile__likes span {
   font-weight: 600;
@@ -3917,6 +4257,11 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   filter: blur(8px);
   -webkit-filter: blur(8px);
   z-index: 2;
+}
+@media (max-width: 600px) {
+  .popular__main:after {
+    display: none;
+  }
 }
 
 .swiper-button-prev2,
@@ -4012,6 +4357,17 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   grid-template-rows: 1fr 1fr;
   grid-gap: 56px 72px;
 }
+@media (max-width: 1100px) {
+  .creators__main {
+    grid-gap: 40px 20px;
+  }
+}
+@media (max-width: 600px) {
+  .creators__main {
+    grid-template-columns: 1fr;
+    grid-gap: 24px;
+  }
+}
 
 .creators__item {
   background: #302034;
@@ -4033,8 +4389,23 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   border-radius: 50%;
   overflow: hidden;
   margin-right: 24px;
-  width: 64px;
-  height: 64px;
+}
+@media (max-width: 1100px) {
+  .creators__item {
+    padding: 20px;
+  }
+  .creators__item img {
+    max-width: 65px;
+  }
+}
+@media (max-width: 750px) {
+  .creators__item {
+    padding: 15px;
+  }
+  .creators__item img {
+    max-width: 45px;
+    margin-right: 10px;
+  }
 }
 
 .creators__inner {
@@ -4050,15 +4421,25 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   font-family: "Oxanium";
   font-weight: 600;
   font-size: 32px;
-  line-height: 35px;
+  line-height: 150%;
   letter-spacing: 0.05em;
+}
+@media (max-width: 1100px) {
+  .creators__name {
+    font-size: 24px;
+  }
+}
+@media (max-width: 750px) {
+  .creators__name {
+    font-size: 18px;
+  }
 }
 
 .creators__price {
   margin-top: 8px;
   font-weight: 500;
   font-size: 24px;
-  line-height: 36px;
+  line-height: 150%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4066,6 +4447,12 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   -ms-flex-align: center;
   align-items: center;
   color: #bdaac1;
+}
+@media (max-width: 1100px) {
+  .creators__price {
+    font-size: 18px;
+    margin-top: 0;
+  }
 }
 
 .creators__count {
@@ -4083,6 +4470,11 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   width: 3px;
   background: #49374e;
 }
+@media (max-width: 900px) {
+  .creators__count::before {
+    left: -15px;
+  }
+}
 
 .creators__number {
   font-family: "Oxanium";
@@ -4092,12 +4484,23 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   letter-spacing: 0.05em;
   margin-bottom: 6px;
 }
+@media (max-width: 1100px) {
+  .creators__number {
+    font-size: 24px;
+    margin-bottom: 0px;
+  }
+}
 
 .creators__items {
   font-weight: 500;
   font-size: 24px;
   line-height: 36px;
   color: #908294;
+}
+@media (max-width: 1100px) {
+  .creators__items {
+    font-size: 18px;
+  }
 }
 
 .subscribe {
@@ -4112,8 +4515,14 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   font-family: "Oxanium";
   font-weight: 700;
   font-size: 64px;
-  line-height: 130px;
+  line-height: 130%;
+  margin-bottom: 30px;
   text-align: center;
+}
+@media (max-width: 600px) {
+  .subscribe__title {
+    font-size: 30px;
+  }
 }
 
 .subscribe__main div {
@@ -4126,6 +4535,20 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   border: 1px solid #e7b226;
   max-width: 680px;
   margin: 0 auto;
+}
+@media (max-width: 750px) {
+  .subscribe__main div {
+    max-width: 100%;
+  }
+}
+@media (max-width: 450px) {
+  .subscribe__main div {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    border: 0;
+  }
 }
 
 .subscribe__input {
@@ -4155,6 +4578,17 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 .subscribe__input ::placeholder {
   color: #a48ea9;
 }
+@media (max-width: 600px) {
+  .subscribe__input {
+    font-size: 18px;
+    padding: 15px 15px 15px 20px;
+  }
+}
+@media (max-width: 450px) {
+  .subscribe__input {
+    border: 1px solid #e7b226;
+  }
+}
 
 .subscribe__btn {
   background: #e7b226;
@@ -4167,10 +4601,28 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   width: 244px;
   padding: 30px 0;
 }
+@media (max-width: 600px) {
+  .subscribe__btn {
+    width: 150px;
+    padding: 15px;
+  }
+}
+@media (max-width: 450px) {
+  .subscribe__btn {
+    margin: 32px auto 0;
+    padding: 15px 34px;
+    width: auto;
+  }
+}
 
 .footer {
   padding: 115px 0;
   background: #251928;
+}
+@media (max-width: 600px) {
+  .footer {
+    padding: 55px 0;
+  }
 }
 
 .footer__main {
@@ -4183,6 +4635,16 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  gap: 40px 20px;
+}
+@media (max-width: 1000px) {
+  .footer__main {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  .footer__main img {
+    max-width: 100px;
+  }
 }
 
 .footer__social {
@@ -4194,6 +4656,11 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   align-items: center;
   gap: 35px;
   margin: 60px 0;
+}
+@media (max-width: 550px) {
+  .footer__social {
+    margin: 20px 0;
+  }
 }
 .footer__social a:hover svg path {
   fill: #f7d7ff;
