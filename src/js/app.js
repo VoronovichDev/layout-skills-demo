@@ -12,6 +12,7 @@ import {
   Mousewheel,
 } from 'swiper';
 import AOS from 'aos';
+import burger from './modules/burger.js';
 
 flsFunctions.isWebp();
 

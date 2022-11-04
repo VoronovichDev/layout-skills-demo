@@ -693,6 +693,10 @@ h6 {
   font-weight: 400;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   overflow-x: hidden;
   position: relative;
@@ -701,7 +705,7 @@ body {
   font-weight: 400;
   background: #1c121f;
 }
-body.active-body {
+body.active {
   overflow: hidden;
 }
 
@@ -3295,6 +3299,8 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 
 .header {
   margin-bottom: 100px;
+  position: relative;
+  z-index: 10;
 }
 
 .header__main {
@@ -3342,6 +3348,11 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
 }
+@media (max-width: 700px) {
+  .header__link {
+    font-size: 24px;
+  }
+}
 
 .header__inner {
   display: -webkit-box;
@@ -3353,8 +3364,31 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 }
 @media (max-width: 700px) {
   .header__inner {
-    display: none;
+    -webkit-transform: translateY(-150%);
+    -ms-transform: translateY(-150%);
+    transform: translateY(-150%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    padding-top: 100px;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
   }
+}
+.header__inner.active {
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+  margin-top: -37px;
 }
 
 .header__links {
@@ -3371,6 +3405,15 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   .header__links {
     margin-right: 30px;
     gap: 25px;
+  }
+}
+@media (max-width: 700px) {
+  .header__links {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin: 0 0 40px 0;
   }
 }
 
@@ -3402,9 +3445,17 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
     display: block;
   }
 }
+.header__burger.active {
+  display: none;
+}
 
 .header__burger--close {
   display: none;
+  position: relative;
+  z-index: 100;
+}
+.header__burger--close.active {
+  display: block;
 }
 
 .first {
