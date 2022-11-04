@@ -4,6 +4,19 @@
    background-size: cover;
    margin-top: 80px;
    padding: 117px 0;
+   position: relative;
+
+   &::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 10%;
+      width: 600px;
+      height: 400px;
+      background-image: url('../../img/popular-effect.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+   }
 }
 
 .subscribe__title {
